@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                <i class="material-icons prefix">person</i>
+                    <input placeholder="" id="Name" type="text" class="validate">
+                     <label for="Name">First Name</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">mail</i>
+                    <input placeholder="" id="email" type="text" class="validate">
+                    <label for="email">email</label>
+                </div>
+
+            </div>
+            
+            <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <textarea placeholder="" id="icon_prefix2" class="materialize-textarea"></textarea>
+                        <label for="Message">Message</label>
+                    </div>
+            </div>
+
+            <div class="row right">
+                <button class=" btn waves-effect waves-light right-align" type="submit" name="action">Submit
+                     <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+
+    
+
+{% endblock %}
