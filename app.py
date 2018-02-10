@@ -1,6 +1,10 @@
 from flask import Flask, render_template
 
+from data import Projects
+
 app = Flask(__name__)
+
+Projects = Projects()
 
 @app.route('/')
 def index():
@@ -12,7 +16,7 @@ def showreel():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', projects = Projects)
 
 @app.route('/about')
 def about():
@@ -28,3 +32,4 @@ def article():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    

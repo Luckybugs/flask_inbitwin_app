@@ -7,3 +7,13 @@
   main {
     flex: 1 0 auto;
   }
+
+  .below {
+    position: absolute;
+    top:100%;
+    left:0px;
+    right:0px;
+    padding:50px;
+    background:#900;
+    color:#fff;
+}

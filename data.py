@@ -1,13 +1,7 @@
 def Projects():
     projects = [
+
             {
-            'id': 1,
-            'title':'Article One',
-            'body':'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            'author':'Brad Traversy',
-            'create_date':'04-25-2017'
-            },
-        {
             'id':1,
             'title':'The Jungle Book',
             'Head text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -18,8 +12,8 @@ def Projects():
             'img_2': 'https://images5.alphacoders.com/789/789272.jpg',
             'img_3': 'http://www.maacindia.com/blog/wp-content/uploads/2016/04/sketches-of-characters-from-disney.jpg',
             'img_4': ''
-         },
-        {
+            },
+            {
             'id':2,
             'title':'The Martian',
             'Head text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -30,8 +24,8 @@ def Projects():
             'img_2': '',
             'img_3': '',
             'img_4': ''
-         },
-        {
+            },
+            {
             'id':3,
             'title':'Exodus',
             'Head text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -42,8 +36,8 @@ def Projects():
             'img_2': '',
             'img_3': '',
             'img_4': ''
-         },
-        {
+            },
+            {
             'id':4,
             'title':'Gardians of the galaxy',
             'Head text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -54,7 +48,7 @@ def Projects():
             'img_2': '',
             'img_3': '',
             'img_4': ''
-         }
+            }
     ]
 
     return projects

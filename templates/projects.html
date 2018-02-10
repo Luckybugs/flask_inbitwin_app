@@ -2,9 +2,30 @@
 
 {% block body %}
 <div class="container">
-<div>
-  <h1 style="font-weight: 600;" class="left-align white-text" >Projects</h1>
-</div>
+    <div>
+      <h1 style="font-weight: 600;" class="left-align " >Projects</h1>
+    </div>
+
+
+  <ul class="collapsible" data-collapsible="expandable">
+    {% for project in projects %}
+    <li>
+      <div class="collapsible-header"> <i class="material-icons">movie</i>{{project.title}}</div>
+      <div class="collapsible-body">
+        <img class=" responsive-img" style="max-height: 4em; max-width: 4em;"src="{{project.img_1}}">
+        <span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    {% endfor %}
+  </ul>
+  
+
+{% for project in projects %}
+  
+  {{project.title}}
+
+
+{% endfor %}
+
 
       <div class="row">
         <div class="col l6 m12">
