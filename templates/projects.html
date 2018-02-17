@@ -1,22 +1,49 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
+    
+
+<div class="container"> 
+<div style="height: 3em;">
+</div>
+    {% for project in projects %}
+    
+      <div class="row flex">
+      
+        <div class="col s12 m5 l4 right-align">
+          <h1 style="font-weight: 600;">{{project.title}}</h1>
+        </div>
+       
+      
+      <div class="col s12 m7 l8">
+          <a href="projects/{{project.title}}"><img class="responsive-img " src="{{project.img_1}}"></a>
+      </div>
+      </div> <!--end row-->
+     
+    {% endfor %}
+     
+   </div>
+
+
 <div class="container">
     <div>
-      <h1 style="font-weight: 600;" class="left-align " >Projects</h1>
+      <h1 style="font-weight: 600; " class="left-align " >Projects</h1>
     </div>
 
 
-  <ul class="collapsible" data-collapsible="expandable">
+  <div class="masonry">
     {% for project in projects %}
-    <li>
-      <div class="collapsible-header"> <i class="material-icons">movie</i>{{project.title}}</div>
-      <div class="collapsible-body">
-        <img class=" responsive-img" style="max-height: 4em; max-width: 4em;"src="{{project.img_1}}">
-        <span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    
+      <figure class="masonry-brick">
+        
+        
+        <a href="projects/{{project.title}}"><img src="{{project.img_1}}" class="masonry-img" alt="{{project.title}} #1">></a>
+        
+      </figure>
+
     {% endfor %}
-  </ul>
+  </div>
   
 
 {% for project in projects %}

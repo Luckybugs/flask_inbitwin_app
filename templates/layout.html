@@ -18,7 +18,7 @@
         {% block body %}{% endblock %}
     </main>
     
-
+    {%include 'includes/_footer.html'%}
 
 
 	<!--Import jQuery before materialize.js-->
@@ -38,12 +38,27 @@
     	$(".button-collapse").sideNav();
 
       $('.collapsible').collapsible();
+
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+
     });
+      // change on scroll
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+       });
  
     </script>
 
+    <script>
+     $(document).ready(function(){
+        var x = document.baseURI;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
 
-    {%include 'includes/_footer.html'%}
+
+    
 </body>
 
 
