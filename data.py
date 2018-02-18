@@ -4,6 +4,7 @@ def Projects():
         {
             'id':1,
             'title':'The Jungle Book',
+            'year': '2016',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'img_1': 'https://hdwallsource.com/img/2016/9/the-jungle-book-movie-desktop-wallpaper-51835-53541-hd-wallpapers.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -64,6 +65,19 @@ def Projects():
         {
             'id':5,
             'title':'Star Wars: The Last Jedi',
+            'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'img_1': ' ',
+            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
+            'video_1_text': '',
+            'img_2': '',
+            'img_3': '',
+            'img_4': ''
+        },
+        {
+            'id':6,
+            'title':'Passengers',
+            'year': '2016',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'img_1': ' ',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
