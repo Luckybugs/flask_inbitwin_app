@@ -30,7 +30,7 @@ def index():
 def showreel():
     return render_template('showreel.html')
 
-@app.route('/projects')
+@app.route('/ebemti')
 def projects():
     return render_template('projects.html', projects = Projects)
 
