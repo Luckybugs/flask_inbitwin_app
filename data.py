@@ -1,5 +1,35 @@
 def Projects():
     projects = [
+        {
+            'id':5,
+            'title':'Star Wars',
+            'byline': 'The Last Jedi',
+            'year': '2017',
+            'head_text':'Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.',
+            'img_1': 'images/star_wars.jpg',
+            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
+            'video_1_text': '',
+            'img_2': 'images/star_wars_2.jpg',
+            'img_2_text':'tekst uz sliku 2',
+            'img_3': 'images/star_wars_3.jpg',
+            'img_3_text':'tekst uz sliku 3',
+            'img_4': 'images/star_wars_4.jpg',
+            'img_4_text':'tekst uz sliku 4'
+        },
+        {
+            'id':6,
+            'title':'Passengers',
+            'year': '2016',
+            'head_text':'A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early.',
+            'img_1': 'images/pasngers_1.jpg',
+            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
+            'video_1_text': '',
+            'img_2': '',
+            'img_3': '',
+            'img_4': ''
+        },
 
         {
             'id':1,
@@ -62,18 +92,7 @@ def Projects():
             'img_3': '',
             'img_4': ''
         },
-        {
-            'id':5,
-            'title':'Star Wars: The Last Jedi',
-            'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': ' ',
-            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
-            'video_1_text': '',
-            'img_2': '',
-            'img_3': '',
-            'img_4': ''
-        },
+
         {
             'id':6,
             'title':'Passengers',

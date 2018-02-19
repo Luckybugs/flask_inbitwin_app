@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
 from data import Projects
@@ -20,26 +20,26 @@ mail = Mail(app)
 
 Projects = Projects()
 
-klasa = 'grey darken-3 z-depth-0'
+
 
 @app.route('/')
 def index():
-    return render_template('home.html', klasa = 'transparent darken-3 z-depth-0')
+    return render_template('home.html')
 
 @app.route('/showreel')
 def showreel():
-    return render_template('showreel.html', klasa = klasa)
+    return render_template('showreel.html')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', projects = Projects, klasa = klasa)
+    return render_template('projects.html', projects = Projects)
 
 @app.route('/projects/<string:title>/')
 def project(title):
     for p in Projects:
         if title in p.values():
             current = p
-    return render_template('project.html', title = title, current = current, klasa = klasa)
+    return render_template('project.html', title = title, current = current)
 
 @app.route('/about' )
 def about():
@@ -47,7 +47,7 @@ def about():
     # msg = Message('Test', sender='djurovic.jelena@gmail.com', recipients=['djurovic.jelena@gmail.com'])
     # msg.body = 'This is a test email' #Customize based on user input
     # mail.send(msg)
-    return render_template('about.html', klasa = klasa)
+    return render_template('about.html')
 
 
 @app.route('/article')

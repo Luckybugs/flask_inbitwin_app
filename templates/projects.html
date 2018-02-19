@@ -8,23 +8,23 @@
   <div class="container">
 
   <div>
-  <h3 style="padding: 1.5em;"class="center-align"> Projects</h3>
+  <h3 style="padding: 1.5em; font-weight: 100" class="center-align"> Projects</h3>
   </div>
 
-  {% for project_row in projects | batch(4, '&nbsp;') %}
+  {% for project_row in projects | batch(3, '&nbsp;') %}
 
       <div class="d-flex row">
 
       {% for project in project_row %}
-        <div class="col s6 m3 l3">
-          <div class=" project_card card small">
+        <div class=" col s12 m6 l4">
+          <div class="  project_card card small ">
             <div class="project_card_image card-image">
-              <img src="{{project.img_1}}">
+              <a href="projects/{{project.title}}"><img src="{{url_for('static', filename= project.img_1)}}"></a>
             </div>
             <div class="card-content">
-              <h5>{{project.title}}</h5>
-              <p>byline</p>
-              <p>2016</p>
+              <a href="projects/{{project.title}}"><h5>{{project.title}}</h5></a>
+              <p>{{project.byline}}</p>
+              <p>{{project.year}}</p>
             </div>
           </div>
         </div>

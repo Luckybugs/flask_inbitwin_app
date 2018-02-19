@@ -132,16 +132,37 @@
 
 .d-flex {
     display:flex;
-    flex-wrap: wrap;
+    
+    flex: 1;
 }
 .project_card{
   border-radius: 5px ;
 
 }
+
+
 .project_card_image{
   border-radius: 5px 5px 0 0;
 
 }
+
+.project_card a:hover {
+    color: #424242;
+    font-size: 2.25em;
+}
+
+.project_card a {
+  color: #757575;
+  font-weight: 600;
+  font-size: 1em;
+
+}
+.project_card h{
+
+
+}
+
+
 
 
 
