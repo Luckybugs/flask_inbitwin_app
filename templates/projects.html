@@ -17,7 +17,7 @@
 
       {% for project in project_row %}
         <div class=" col s12 m6 l4">
-          <div class="  project_card card small ">
+          <div class="  project_card card small hoverable">
             <div class="project_card_image card-image">
               <a href="projects/{{project.title}}"><img src="{{url_for('static', filename= project.img_1)}}"></a>
             </div>

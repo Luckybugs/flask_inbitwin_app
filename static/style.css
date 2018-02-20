@@ -44,9 +44,10 @@
 
 
 
-.flex{
-  flex: 1 0 auto;
-
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .d-flex {
@@ -72,6 +73,10 @@
   font-size: 1em;
 }
 
+.caption{
+  color:#757575;
+
+}
 
 
 
