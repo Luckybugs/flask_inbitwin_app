@@ -25,13 +25,13 @@ Projects = Projects()
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('home.html', projects = Projects)
 
 @app.route('/showreel')
 def showreel():
     return render_template('showreel.html')
 
-@app.route('/ebemti')
+@app.route('/projects')
 def projects():
     return render_template('projects.html', projects = Projects)
 
@@ -52,11 +52,12 @@ def article():
 
 class EmailForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
-    email = StringField('email', [
+    email = StringField('Email', [
+        validators.Email(),
         validators.DataRequired(),
         validators.Length(min=6, max=50)
         ])
-    message = TextAreaField('message', [validators.Length(min=10)])
+    message = TextAreaField('Message', [validators.Length(min=10)])
 
 @app.route('/about', methods=["GET", "POST"] )
 def about():

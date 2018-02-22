@@ -19,15 +19,15 @@ def Projects():
         },
         {
             'id':6,
-            'title':'Passengers',
+            'title':'Passangers',
             'year': '2016',
-            'head_text':'A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early.',
-            'img_1': 'images/pasngers_1.jpg',
+            'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'img_1': 'images/Passengers.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
-            'img_2': '',
-            'img_3': '',
+            'img_2': 'https://images5.alphacoders.com/789/789272.jpg',
+            'img_3': 'http://www.maacindia.com/blog/wp-content/uploads/2016/04/sketches-of-characters-from-disney.jpg',
             'img_4': ''
         },
 
@@ -36,7 +36,7 @@ def Projects():
             'title':'The Jungle Book',
             'year': '2016',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': 'https://hdwallsource.com/img/2016/9/the-jungle-book-movie-desktop-wallpaper-51835-53541-hd-wallpapers.jpg',
+            'img_1': 'images/The_Jungle_Book.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -47,8 +47,9 @@ def Projects():
         {
             'id':2,
             'title':'The Martian',
+            'year': '2015',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': 'https://nerdist.com/wp-content/uploads/2015/10/MartianDiff_FEAT.jpg',
+            'img_1': 'images/Martian.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -59,8 +60,10 @@ def Projects():
         {
             'id':3,
             'title':'Exodus',
+            'byline': 'Gods and Kings',
+            'year': '2014',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': 'http://dotb.tc0bblfg2d81v7kurec.netdna-cdn.com/wp-content/uploads/2015/12/Exodus-Gods-and-Kings.jpg',
+            'img_1': 'images/Exodus.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -71,8 +74,9 @@ def Projects():
         {
             'id':4,
             'title':'Gardians of the galaxy',
+            'year': '2014',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': ' ',
+            'img_1': 'images/galaxy.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -82,9 +86,10 @@ def Projects():
         },
         {
             'id':5,
-            'title':'Fantastic Beasts',
+            'title':'Fantastic Beasts and Where to Find Them',
+            'year': '2016',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': ' ',
+            'img_1': 'images/fantastic.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -95,10 +100,10 @@ def Projects():
 
         {
             'id':6,
-            'title':'Passengers',
+            'title':'Doctor Strange',
             'year': '2016',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'img_1': ' ',
+            'img_1': 'images/strange.jpg',
             'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
             'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
             'video_1_text': '',
@@ -106,6 +111,7 @@ def Projects():
             'img_3': '',
             'img_4': ''
         }
+
     ]
 
     return projects
