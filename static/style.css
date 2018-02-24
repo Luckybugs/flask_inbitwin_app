@@ -158,6 +158,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 }
 
 
+
+
+
+
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+
+
+
 .h_container{
   padding: 1em 0;
   float: left;
@@ -172,20 +188,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 
 @media screen and (min-width: 900px){
   .h_container{
-    width: 33.33333%;
+    width: 50%;
   }
 }
 
+
+
 .content {
   position: relative;
-  
-  max-width: 400px;
+  width: 96%;
+  max-width: 600px;
+  max-height: 300px;
   margin: auto;
   overflow: hidden;
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.1);
   position: absolute;
   height: 99%;
   width: 100%;
@@ -204,7 +223,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 }
 
 .content-image{
- 
+  width: 100%;
+
 }
 
 .content-details {
@@ -233,8 +253,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 .content-details h3{
   color: #fff;
   font-weight: 100;
- 
-  margin-bottom: 0.5em;
+
+}
+.content-details h6{
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.5em;
 
 }
 

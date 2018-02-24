@@ -8,47 +8,30 @@
   </div>
 
 
-
 <div class="container">
 
 
-    {% for project_row in projects | batch(2) %}
-    <div class="row">
-      {% for project in project_row %}
-       
-        <div class="col s12 m12 l6">
-         
 
+  {% for project in projects %}
 
-
-
-          <div class="h_container">
-            <div class="content">
-              <a href="projects/{{project.title}}" >
-                <div class="content-overlay"></div>
-                <img class="content-image responsive-img" src="{{url_for('static', filename= project.img_1)}}">
-                <div class="content-details fadeIn-bottom">
-                  <h3 class="content-title">{{project.title}}</h3>
-                  <p class="content-text">{{project.byline}}</p>
-                </div>
-              </a>
-            </div>
-          
-
-
-
-
-
-
-          </div>
+  <div class="h_container">
+    <div class="content">
+      <a href="projects/{{project.title}}" >
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{{url_for('static', filename= project.img_1)}}">
+        <div class="content-details fadeIn-bottom">
+          <h3 class="content-title">{{project.title}}</h3>
+          <h6 class="content-text">{{project.byline}}</h6>
         </div>
-        
-      {% endfor %}
+      </a>
     </div>
+  </div>
 
-    {% endfor %}
-</div>
-  </div><!--end container-->
+  {% endfor %}
+
+
+</div><!--end container-->
+
 
 
 
@@ -82,6 +65,7 @@
       </div>
 
   {% endfor %}
+  </div>
 
 
 
