@@ -1,15 +1,17 @@
 
 <div class="navbar-fixed ">
 
-  <nav id="navigacija" {% if request.endpoint == "index" %} class="transparent z-depth-0 tirkizgrad" {% else %} class="transparent z-depth-0 tirkizgrad"{% endif %}>
+  <nav id="navigacija" {% if request.endpoint == "index" %} class="transparent z-depth-0 tirkizgrad" {% else %} class="  z-depth-0 tirkizgrad"{% endif %}>
 
     <div class="nav-wrapper ">
-      <div class="brand-logo col s6 ms l12" ><b>aleksandar </b>jovanovic | envirnoment TD</div>
+      <a  href="/"  class="brand-logo" >
+        <span class="rwd-line"><b>aleksandar</b> jovanovic |</span>
+        <span class="rwd-line center-align">envirnoment TD</span></a>
 
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down ">
         <li><a href="/">Home</a></li>
-        <li><a class="waves-effect-light btn cyan " href="/showreel">Showreel</a></li>
+        <li><a class="btn waves-effect waves-light cyan" href="/showreel">Showreel</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/articles">Articles</a></li>
        <li><a href="/about">About</a></li>

@@ -3,13 +3,63 @@
 {% block body %}
 
 
+  <div>
+  <h3 class="page_h center-align"> Projects</h3>
+  </div>
 
-<div class="section grey lighten-4">
+
+
+<div class="container">
+
+
+    {% for project_row in projects | batch(2) %}
+    <div class="row">
+      {% for project in project_row %}
+       
+        <div class="col s12 m12 l6">
+         
+
+
+
+
+          <div class="h_container">
+            <div class="content">
+              <a href="projects/{{project.title}}" >
+                <div class="content-overlay"></div>
+                <img class="content-image responsive-img" src="{{url_for('static', filename= project.img_1)}}">
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">{{project.title}}</h3>
+                  <p class="content-text">{{project.byline}}</p>
+                </div>
+              </a>
+            </div>
+          
+
+
+
+
+
+
+          </div>
+        </div>
+        
+      {% endfor %}
+    </div>
+
+    {% endfor %}
+</div>
+  </div><!--end container-->
+
+
+
+
+
+
+<div class="section white">
+
   <div class="container">
 
-  <div>
-  <h3 style="padding: 1.5em; font-weight: 100" class="center-align"> Projects</h3>
-  </div>
+
 
   {% for project_row in projects | batch(3, '&nbsp;') %}
 
@@ -39,6 +89,21 @@
 
   </div><!--end container-->
 </div><!--end section-->
+
+<div class="section blue">
+
+
+{% for group in projects|groupby('year') %}
+    <li>{{ group.grouper }}
+    <ul>
+        {% for item in group.list %}
+          <li>{{ item.title }}: {{ item.year }}</li>
+        {% endfor %}
+    </ul>
+    </li>
+{% endfor %}
+</ul>
+</div>
 
 
 
