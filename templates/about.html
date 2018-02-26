@@ -4,27 +4,42 @@
 
 <div class="container">
 
-  <div>
-  <h3 class=" page_h center-align"> About</h3>
-  </div>
-<div class-"section">
-    <div style="height: 3em;">
+      <div>
+      <h3 class=" page_h center-align"> About</h3>
+      </div>
+
+
+
+<div  class="section">
+
+    <div style="font-weight: 100" class="center-align">
+      <img style="background: rgba(206,147,216, 0.3);" class=" responsive-img circle" src="{{ url_for('static', filename='images/about_foto.jpg')}}">
+      <p>Aleksandar Jovanovic</p>
+      <p>EnvironmentTD @ MPC</p>
+      <p><i class="material-icons prefix">location_on</i>&nbspLondon</p>
     </div>
-    <div class="center-align">
-      <img class="responsive-img circle" src="{{ url_for('static', filename='images/about_foto.jpg')}}">
-    </div>
+
 </div>
-<div class="divider"></div>
+
+
+<div>
+<h5 style="font-weight: 100; margin: 2em;" class="center-align" >Get in touch</h5 >
+</div>
+<div  class="row">
+
+
+
+<div  class=" col s12 m6 offset-m3">
    <!-- Contacct form -->
    {% from "includes/_formhelpers.html" import render_field %}
-   <form method="POST">
+   <form  method="POST">
       <div class="row">
-         <div class="input-field col s12 m6">
+         <div class="input-field col s12 l6">
             <i class="material-icons prefix">person</i>
            {{render_field(form.name, class_="validate")}}
            
          </div>
-         <div class="input-field col s12 m6">
+         <div class="input-field col s12 l6">
             <i class="material-icons prefix">mail</i>
            {{render_field(form.email, class_="validate")}}
            <label class="active" for="email">Email</label>
@@ -35,10 +50,11 @@
        {{render_field(form.message, class_="materialize-textarea")}}
        <label class="active" for="textarea"></label>
      </div>
-     <button class=" btn waves-effect waves-light grey darken-3 right" type="submit" value="Submit" name="action" >Send</button>
+     <button class=" btn waves-effect waves-light cyan right" type="submit" value="Submit" name="action" >Send</button>
    </form>
 
 
-    
+ </div>  
+ </div> 
 </div><!--end container-->
 {% endblock %}

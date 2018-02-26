@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container">
+<div style="height: 3em;">
+</div>
+    <div class="row flex">
+        <div class="col s12 m4 l4">
+            <h1 style="font-weight: 600;">{{title}}</h1>
+            <h5>{{current.byline}}</h5>
+            <p>({{current.year}})</p>
+            <p>{{current.head_text}}</p>
+        </div>
+
+    <div class="col s12 m8 l8">
+        <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_1)}}">
+    </div>
+    </div> <!--end row -->
+    
+     <div class="row flex">
+         <div class="col s12 m8 l8">
+        <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_2)}}">
+    </div>
+        <div class="col s12 m4 l4">
+            <p>{{current.img_2_text}}</p>
+        </div>
+
+    </div> <!--end row -->
+
+    <div class="row flex">
+    <div class="col s12 m4 l4">
+        <p>{{current.img_3_text}}</p>
+    </div>
+
+<div class="col s12 m8 l8">
+    <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_3)}}">
+</div>
+</div> <!--end row -->
+
+ <div class="row flex">
+     <div class="col s12 m8 l8">
+    <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_4)}}">
+</div>
+    <div class="col s12 m4 l4">
+        <p>{{current.img_4_text}}</p>
+    </div>
+
+</div> <!--end row -->
+
+{% for k, v in current.items() %}
+        {{k}} : {{v}} </br>
+{% endfor %}
+
+{{ current|map('lower')|join(', ') }}
+
+
+in(value, seq)
+
+</div> <!-- end container -->
+
+
+<!-- NOVA IDEJA -->
+
+<div class="section white">
+  <div class="container">
+  <div class="row">
+    <div class=" col l3">
+        <h1  class=""style="font-weight: 600; ">{{title}}</h1>
+        <h5 style="font-weight: 100;">{{current.byline}}</h5>
+    </div>
+    </div>
+    
+    {% with newdict=current|dictsort %}
+        {% for k, v in newdict %}
+            {% if 'img' in k %}
+            <div class="row">
+                {% if 'text' not in k %}
+                    <div class="col s12 m8 l8 ">
+                    <img class="materialboxed responsive-img" src="{{url_for('static', filename=v)}}">
+                    </div>
+                {% else %}
+                    <div class="col s12 m4 l4">
+                    <p class="center-align"> {{v}} </p>
+                    </div>
+            </div>
+                {% endif %}
+
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+
+
+  </div><!-- end container -->
+</div><!-- end section -->
+
+{% endblock %}
+

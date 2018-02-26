@@ -14,8 +14,8 @@
 
   {% for project in projects %}
 
-  <div class="h_container">
-    <div class="content">
+  <div class=" h_container">
+    <div class="content ">
       <a href="projects/{{project.title}}" >
         <div class="content-overlay"></div>
         <img class="content-image" src="{{url_for('static', filename= project.img_1)}}">
@@ -33,98 +33,6 @@
 </div><!--end container-->
 
 
-
-
-
-
-
-<div class="section white">
-
-  <div class="container">
-
-
-
-  {% for project_row in projects | batch(3, '&nbsp;') %}
-
-      <div class="d-flex row">
-
-      {% for project in project_row %}
-        <div class=" col s12 m6 l4">
-          <div class="  project_card card small hoverable">
-            <div class="project_card_image card-image waves-effect waves-block waves-light">
-              <a href="projects/{{project.title}}"><img src="{{url_for('static', filename= project.img_1)}}"></a>
-            </div>
-            <div class="card-content">
-              <a href="projects/{{project.title}}"><h5>{{project.title}}</h5></a>
-              <p>{{project.byline}}</p>
-              <p>{{project.year}}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-
-  {% endfor %}
-  </div>
-
-
-
-
-
-  </div><!--end container-->
-</div><!--end section-->
-
-<div class="section blue">
-
-
-{% for group in projects|groupby('year') %}
-    <li>{{ group.grouper }}
-    <ul>
-        {% for item in group.list %}
-          <li>{{ item.title }}: {{ item.year }}</li>
-        {% endfor %}
-    </ul>
-    </li>
-{% endfor %}
-</ul>
-</div>
-
-
-
-
-
-    
-
-<div class="container"> 
-<div style="height: 3em;">
-</div>
-    {% for project in projects %}
-    
-      <div class="row flex">
-      
-        <div class="col s12 m5 l4 right-align">
-          <h1 style="font-weight: 600;">{{project.title}}</h1>
-        </div>
-       
-      
-      <div class="col s12 m7 l8">
-          <a href="projects/{{project.title}}"><img class="responsive-img " src="{{project.img_1}}"></a>
-      </div>
-      </div> <!--end row-->
-     
-    {% endfor %}
-     
-   </div>
-
-</div><!--end container-->
-
-
-{% for project in projects %}
-  
-  {{project.title}}
-
-
-{% endfor %}
 
 
 

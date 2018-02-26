@@ -35,7 +35,7 @@
 
 .navbar-fixed {
 
-  height: 5vh;
+  height: 10vh;
 
 }
 
@@ -126,36 +126,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
- color: #424242;
+  color: #00bcd4  !important;
 }
 /* label underline focus color */
 .input-field input[type=text]:focus {
- border-bottom: 1px solid #424242;
- box-shadow: 0 1px 0 0 #000;
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0 #00bcd4 !important;
 }
 
 .input-field input[type=text]:focus + label {
- color: #424242;
+ color: #00bcd4 !important;
 }
 /* label underline focus color */
 .input-field input[type=email]:focus {
- border-bottom: 1px solid #424242;
- box-shadow: 0 1px 0 0 #000;
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0 #00bcd4 !important;
 }
 .input-field input[type=email]:focus + label {
- color: #424242;
+ color: #00bcd4 !important;
 }
 .input-field input[type=textarea]:focus {
- border-bottom: 1px solid #424242;
- box-shadow: 0 1px 0 0 #000;
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0#00bcd4 !important;
 }
 .input-field input[type=textarea]:focus + label {
- color: #424242;
+ color: #00bcd4 !important;
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
- color: #757575;
+ color: #00bcd4 !important;
 }
+
+
+
 
 
 
@@ -204,7 +207,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.1);
+  background: rgba(206,147,216, 0.3);
   position: absolute;
   height: 99%;
   width: 100%;
@@ -224,6 +227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 
 .content-image{
   width: 100%;
+  height: 100%;
 
 }
 
