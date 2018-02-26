@@ -42,14 +42,13 @@
          </div>
          <div class="input-field col s12 l6">
             <i class="material-icons prefix">mail</i>
-           {{render_field(form.email, class_="validate", required="")}}
+           {{render_field(form.email, class="validate", required="")}}
          
          </div>
        </div>
      <div class="input-field">
         <i class="material-icons prefix">create</i>
        {{render_field(form.message, class_="materialize-textarea validate", required="")}}
-       <label class="active" for="textarea"></label>
      </div>
      <button class=" btn waves-effect waves-light cyan right" type="submit" onclick="Materialize.toast('I am a toast!', 5000, 'rounded')" value="Submit" name="action" >Send</button>
    </form>
