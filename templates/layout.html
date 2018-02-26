@@ -13,8 +13,10 @@
 
 <body >
     {%include 'includes/_navbar.html'%}
+
   
     <main>
+    {% include 'includes/_messages.html' %}
         {% block body %}{% endblock %}
     </main>
     

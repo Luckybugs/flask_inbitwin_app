@@ -53,27 +53,29 @@ def article():
 class EmailForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
     email = StringField('Email', [
-        validators.Email(),
-        validators.DataRequired(),
-        validators.Length(min=6, max=50)
-        ])
+        validators.Length(min=6, message='Little short for an email address?'),
+        validators.Email(message='That\'s not a valid email address.')
+    ])
     message = TextAreaField('Message', [validators.Length(min=10)])
 
 @app.route('/about', methods=["GET", "POST"] )
 def about():
     form = EmailForm(request.form)
 
-    if request.method == 'POST' and form.validate():
+    if request.method == 'POST':
         name = form.name.data
         email = form.email.data
         message = form.message.data
 
         flash('jebote', 'success')
-        msg = Message('Test', sender=email, recipients=['djurovic.jelena@gmail.com'])
-        msg.body = message #Customize based on user input
-        mail.send(msg)
 
-        return redirect(url_for('about'))
+        print form.name.data, form.email.data, form.message.data, form.validate()
+        
+        # msg = Message('Test', sender=email, recipients=['djurovic.jelena@gmail.com'])
+        # msg.body = message #Customize based on user input
+        # mail.send(msg)
+
+        #return redirect(url_for('about'))
 
 
     return render_template('about.html', form=form)
