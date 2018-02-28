@@ -1,11 +1,11 @@
-  body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     
   }
 
-  main {
+main {
     flex: 1 0 auto;
   }
 
@@ -66,10 +66,25 @@ background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(206,147,216,1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ce93d8',GradientType=0 ); /* IE6-9 */
 }
 
-.page-footer-fixed {
-  z-index: 5000;
+.beligrad{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7f7f7f+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(127,127,127,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(127,127,127,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(127,127,127,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a67f7f7f',GradientType=0 ); /* IE6-9 */
+}
+.page-footer {
+  z-index: 500;
+
 }
 
+#futer_text, #futer_ikonice a  {
+  color: #424242;
+}
+
+.page-footer a {
+  color: #fff;
+}
 
 
 .rwd-line { 
@@ -119,6 +134,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 
 
 
+/* FORM STYLE */
+
+/* label color */
+.input-field label {
+ color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #00bcd4  !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0 #00bcd4 !important;
+}
+
+.input-field input[type=text]:focus + label {
+ color: #00bcd4 !important;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0 #00bcd4 !important;
+}
+.input-field input[type=email]:focus + label {
+ color: #00bcd4 !important;
+}
+.input-field input[type=textarea]:focus {
+ border-bottom: 1px solid #00bcd4 !important;
+ box-shadow: 0 1px 0 0#00bcd4 !important;
+}
+.input-field input[type=textarea]:focus + label {
+ color: #00bcd4 !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #00bcd4 !important;
+}
 
 
 

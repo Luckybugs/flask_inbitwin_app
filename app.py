@@ -56,7 +56,7 @@ class EmailForm(Form):
         validators.Length(min=6, message='Little short for an email address?'),
         validators.Email(message='That\'s not a valid email address.')
     ])
-    message = TextAreaField('Message', [validators.Length(min=10)])
+    message = TextAreaField('Message', [validators.Length(min=20, message='Not much to say?')])
 
 @app.route('/about', methods=["GET", "POST"] )
 def about():

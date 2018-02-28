@@ -1,14 +1,16 @@
 {% macro render_field(field) %}
 
+
   {{ field(**kwargs)|safe }}
+  {{field.label(data_success="ok", class_="valid")}}
   {% if field.errors %}
     
     {% for error in field.errors %} 
-	    {{field.label(data_error=error)}}   
+	    {{field.label(data_error=error, class_="invalid")}}   
     {% endfor %}
    
   {% else %}
-   		{{field.label(data_success="right")}}
+   		{{field.label(data_success="ok", class_="valid")}}
   
   {% endif %}
 {% endmacro %}

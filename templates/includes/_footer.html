@@ -1,33 +1,32 @@
 
-        <footer class="page-footer-fixed ">
 
-          <div class="footer-copyright ">
-            <div class="row">
-              <div class="col l6 s12">
-                ©2018 Aleksandar Jovanovic and Respective Studios | All images are for showreel purposes only.
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <a class="white-text" href="#!"><i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="I am a tooltip"">add</i></a>&nbsp
-                <a class="white-text" href="#!"><i class="material-icons">adb</i></a>&nbsp
-                <a class="white-text" href="#!"><i class="material-icons">beach_access</i></a>&nbsp
-                <a class="white-text" href="#!"><i class="material-icons">wc</i></a>&nbsp
-              </div>
-                <div class="col s12 m4 l4">
-                  <img class="" src="{{url_for('static', filename='my-icons-collection\png\006-social-media.png')}}">
-                </div>
-            </div>
-          </div>
-        </footer>
-<!-- FIXED ACTION BUTTON -->
-    
-    <div class="fixed-action-btn ">
+<footer class="page-footer transparent ">
+  <div class="container center-align">  
+      <div {% if request.endpoint != "index" %} id="futer_ikonice" {% endif %}>
+        <a class="" href="#!"><i class="flaticon-vimeo tooltipped" data-position="top" data-delay="50" data-tooltip="vimeo"></i></a>&nbsp
+        <a class="" href="#!"><i class="flaticon-linkedin tooltipped"  data-position="top" data-delay="50" data-tooltip="linkedin"></i></a>&nbsp
+        <a class="" href="#!"><i class="flaticon-facebook tooltipped"  data-position="top" data-delay="50" data-tooltip="facebook"></i></a>&nbsp
+      </div>
+  </div>
+  
+  <div class="footer-copyright transparent" {% if request.endpoint != "index" %} id="futer_text" {% endif %}>
+    <div class="container center-align ">
+
+          <p > ©2018 Aleksandar Jovanovic and Respective Studios | All images are for showreel purposes only.</p>
+          <p style="font-size: 0.8em;"> icons by: <a class="cyan-text" href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a></p>  
+      </div>
+  </div>
+
+</footer>
 
 
-      <a href="#" class="btn-floating cyan btn-medium"><i class="large material-icons">mode_edit</i></a>
-      <ul>
-        <li><a href="#" class="btn-floating transparent btn-medium"><i class="medium material-icons">email</i></a></li>
-        <li><a href="#" class="btn-floating transparent btn-medium"><i class="large material-icons">format_quote</i></a></li>
-        <li><a href="#" class="btn-floating transparent btn-medium"><i class="large material-icons">publish</i></a></li>
-        <li><a href="#" class="btn-floating transparent btn-medium"><i class="large material-icons">attach_file</i></a></li>
-      </ul>
-    </div>
+
+
+
+
+
+
+
+
+
+
