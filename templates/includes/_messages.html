@@ -1,0 +1,21 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+
+
+{% if error %}
+  <div class="red">{{error}}</div>
+{% endif %}
+
+{% if msg %}
+  
+
+   <script> $(document).ready(function(){ Materialize.toast('{{ msg }}', 4000, 'rounded') }) </script>
+
+{% endif %}

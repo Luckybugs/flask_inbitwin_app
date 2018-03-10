@@ -37,20 +37,20 @@
       <div class="row">
          <div class="input-field col s12 l6">
             <i class="material-icons prefix">person</i>
-           {{render_field(form.name, class_="validate", required="")}}
+           {{render_field(form.name, class_="", required="",placeholder="Walter White")}}
            
          </div>
          <div class="input-field col s12 l6">
             <i class="material-icons prefix">mail</i>
-           {{render_field(form.email, class_="validate")}}
+           {{render_field(form.email, class_="", required="", placeholder="w.w@gmail.com")}}
          
          </div>
        </div>
      <div class="input-field">
         <i class="material-icons prefix">create</i>
-       {{render_field(form.message, class_="materialize-textarea validate", required="")}}
+       {{render_field(form.message, class_="materialize-textarea ", required="", placeholder=" I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot and you think that of me? No. I am the one who knocks! ")}}
      </div>
-     <button class=" btn waves-effect waves-light cyan right" type="submit" onclick="Materialize.toast('I am a toast!', 5000, 'rounded')" value="Submit" name="action" >Send</button>
+     <button class=" btn waves-effect waves-light cyan right" type="submit"  value="Submit" name="action" >Send</button>
    </form>
 
 

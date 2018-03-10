@@ -6,16 +6,19 @@ def Projects():
             'byline': 'The Last Jedi',
             'year': '2017',
             'head_text':'Rey develops her newly discovered abiliti.',
-            'img_1': 'images/star_wars.jpg',
-            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
-            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
-            'video_1_text': '',
-            'img_2': 'images/star_wars_2.jpg',
-            'img_2_text':'tekst uz sliku 2',
-            'img_3': 'images/star_wars_3.jpg',
-            'img_3_text':'tekst uz sliku 3',
-            'img_4': 'images/star_wars_4.jpg',
-            'img_4_text':'tekst uz sliku 4'
+            'media':
+                    {
+                        'img_1': 'images/star_wars.jpg',
+                        'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+                        'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
+                        'video_1_text': '',
+                        'img_2': 'images/star_wars_2.jpg',
+                        'img_2_text':'tekst uz sliku 2',
+                        'img_3': 'images/star_wars_3.jpg',
+                        'img_3_text':'tekst uz sliku 3',
+                        'img_4': 'images/star_wars_4.jpg',
+                        'img_4_text':'tekst uz sliku 4'
+                   }
         },
         {
             'id':6,
@@ -110,7 +113,21 @@ def Projects():
             'img_2': '',
             'img_3': '',
             'img_4': ''
+        },
+        {
+            'id':6,
+            'title':'Doctor Strange',
+            'year': '2016',
+            'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'img_1': 'images/strange.jpg',
+            'img_1_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
+            'video_1':'https://player.vimeo.com/video/170367649" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen',
+            'video_1_text': '',
+            'img_2': '',
+            'img_3': '',
+            'img_4': ''
         }
+
 
     ]
 

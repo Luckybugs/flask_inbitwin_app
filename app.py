@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_mail import Mail, Message
 from wtforms import Form, StringField, TextAreaField, validators
+from urllib import quote
 
 from data import Projects
 
@@ -21,6 +22,9 @@ mail = Mail(app)
 
 Projects = Projects()
 
+def no_spaces(string):
+    return quote(string)
+
 
 
 @app.route('/')
@@ -35,11 +39,13 @@ def showreel():
 def projects():
     return render_template('projects.html', projects = Projects)
 
-@app.route('/projects/<string:title>/')
+@app.route('/projects/<title>/')
 def project(title):
     for p in Projects:
         if title in p.values():
             current = p
+            
+            app.logger.info(no_spaces(title))
     return render_template('project.html', title = title, current = current)
 
 
@@ -49,33 +55,43 @@ def project(title):
 def article():
     return render_template('article.html')
 
-
+# FORM CLASS
 class EmailForm(Form):
-    name = StringField('Name', [validators.Length(min=1, max=50)])
+    name = StringField('Name', [validators.Length(min=2, max=50, message='not a valid name')])
     email = StringField('Email', [
-        validators.Length(min=6, message='Little short for an email address?'),
+        validators.Length(min=6, max=120, message='Little short for an email address?'),
         validators.Email(message='That\'s not a valid email address.')
     ])
     message = TextAreaField('Message', [validators.Length(min=20, message='Not much to say?')])
+
+
 
 @app.route('/about', methods=["GET", "POST"] )
 def about():
     form = EmailForm(request.form)
 
-    if request.method == 'POST':
+    if request.method == 'POST' and form.validate():
         name = form.name.data
         email = form.email.data
         message = form.message.data
 
-        flash('jebote', 'success')
 
-        print form.name.data, form.email.data, form.message.data, form.validate()
+
+        flash('jebote', 'success')
+        msg = 'jej!!!!!!!'
+
+        print form.name.data, form.email.data, form.message.data, form.validate(), form.errors
         
         # msg = Message('Test', sender=email, recipients=['djurovic.jelena@gmail.com'])
         # msg.body = message #Customize based on user input
         # mail.send(msg)
 
-        #return redirect(url_for('about'))
+        return render_template('about.html', form=form, msg=msg)
+    else:
+
+        print form.name.data, form.email.data, form.message.data, form.validate(), form.errors
+        msg = 'Youre message has not been sent'
+        return render_template('about.html', form=form, msg=msg)
 
 
     return render_template('about.html', form=form)

@@ -8,14 +8,18 @@
   </div>
 
 
-<div class="container">
+
+
+
+
+<div class="container ">
 
 
 
   {% for project in projects %}
 
-  <div class=" h_container">
-    <div class="content ">
+  <div class="  h_container">
+    <div class=" content ">
       <a href="projects/{{project.title}}" >
         <div class="content-overlay"></div>
         <img class="content-image" src="{{url_for('static', filename= project.img_1)}}">
@@ -28,6 +32,8 @@
   </div>
 
   {% endfor %}
+
+
 
 
 </div><!--end container-->
