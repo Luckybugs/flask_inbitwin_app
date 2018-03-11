@@ -32,15 +32,29 @@ main {
   transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 600px) {
+  .navbar-fixed {
 
-.navbar-fixed {
-
-  height: 3rem;
+    height: 7rem;
+  }
 
 }
 
+@media screen and (min-width: 600px){
+    .navbar-fixed { height: 3rem;}
+        }
+
+
 #navigacija {
   height: 10rem;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .page_h{
+    font-size: 1.8rem;
+  }
+
 
 }
 
@@ -48,6 +62,7 @@ main {
 
   padding-bottom: 1em;
   font-weight: 100;
+
 }
 
 .tirkizgrad{
@@ -102,6 +117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
    .rwd-line { 
       font-size: 0.9em; 
    }
+
 
 }
 .rwd-line { 

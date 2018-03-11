@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, flash, redirect, url_for, ses
 from flask_mail import Mail, Message
 from wtforms import Form, StringField, TextAreaField, validators
 from urllib import quote
+from wtforms.csrf.session import SessionCSRF
+
 
 from data import Projects
 
@@ -56,7 +58,19 @@ def article():
     return render_template('article.html')
 
 # FORM CLASS
-class EmailForm(Form):
+
+
+class MyBaseForm(Form):
+    class Meta:
+        csrf = True
+        csrf_class = SessionCSRF
+        csrf_secret = 'CSRF_SECRET_KEY'
+
+        @property
+        def csrf_context(self):
+            return session
+
+class EmailForm(MyBaseForm):
     name = StringField('Name', [validators.Length(min=2, max=50, message='not a valid name')])
     email = StringField('Email', [
         validators.Length(min=6, max=120, message='Little short for an email address?'),
@@ -68,6 +82,7 @@ class EmailForm(Form):
 
 @app.route('/about', methods=["GET", "POST"] )
 def about():
+
     form = EmailForm(request.form)
 
     if request.method == 'POST' and form.validate():
@@ -87,11 +102,11 @@ def about():
         # mail.send(msg)
 
         return render_template('about.html', form=form, msg=msg)
-    else:
+    elif request.method == 'POST' and not form.validate():
 
         print form.name.data, form.email.data, form.message.data, form.validate(), form.errors
-        msg = 'Youre message has not been sent'
-        return render_template('about.html', form=form, msg=msg)
+        error = 'Youre message has not been sent!'
+        return render_template('about.html', form=form, error=error)
 
 
     return render_template('about.html', form=form)
@@ -100,5 +115,6 @@ def about():
 
 if __name__ == '__main__':
     app.secret_key='secret123'
+
     app.run(debug=True)
     

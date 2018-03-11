@@ -10,7 +10,7 @@
 
 
 {% if error %}
-  <div class="red">{{error}}</div>
+  <script> $(document).ready(function(){ Materialize.toast('{{ error }}', 4000, 'rounded') }) </script>
 {% endif %}
 
 {% if msg %}

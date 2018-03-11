@@ -34,6 +34,10 @@
    <!-- Contacct form -->
    {% from "includes/_formhelpers.html" import render_field %}
    <form  method="POST">
+   {{ form.csrf_token }}
+    <!-- {% if form.csrf_token.errors %}
+        <div class="warning">You have submitted an invalid CSRF token</div>
+    {% endif %} -->
       <div class="row">
          <div class="input-field col s12 l6">
             <i class="material-icons prefix">person</i>
@@ -42,7 +46,7 @@
          </div>
          <div class="input-field col s12 l6">
             <i class="material-icons prefix">mail</i>
-           {{render_field(form.email, class_="", required="", placeholder="w.w@gmail.com")}}
+           {{render_field(form.email, class_="", required="", placeholder="haisenberg@gmail.com")}}
          
          </div>
        </div>
@@ -51,6 +55,7 @@
        {{render_field(form.message, class_="materialize-textarea ", required="", placeholder=" I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot and you think that of me? No. I am the one who knocks! ")}}
      </div>
      <button class=" btn waves-effect waves-light cyan right" type="submit"  value="Submit" name="action" >Send</button>
+
    </form>
 
 

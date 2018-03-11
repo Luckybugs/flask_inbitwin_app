@@ -2,51 +2,50 @@
 
 {% macro render_field(field) %}
 
-
-
 {% set class_ = kwargs.pop('class_', '') %}
 
- 
-  
-  {% if field.errors  %}
+
+
+{% if field.errors|length == 0 %}
         
-   {% set class_ = class_ + ' validate invalid ' %}
-    {% for error in field.errors %} 
+        {{ field(class_=class_, **kwargs) }}
+
+{% else %}
+  
+        {% if field.errors  %}
+        
+        {% set class_ = class_ + ' validate invalid ' %}
+                {% for error in field.errors %} 
     
  
-    {% endfor %}
+                 {% endfor %}
    
-  {% else %}
+        {% else %}
     
-    {% set class_ = class_ + ' validate valid' %}
-   
-      
+            {% set class_ = class_ + ' validate valid' %}
   
-  {% endif %}
+        {% endif %}
 
 
+        {{ field(class_=class_, **kwargs) }}
 
 
+      {% if field.errors  %}
 
-{{ field(class_=class_, **kwargs) }}
+        {% for error in field.errors %} 
+            
+            {{field.label(data_error=error, class_="")}}  
+     
+        {% endfor %}
+       
+      {% else %}
+       
+        {{field.label( data_success='ok', class_="")}}  
+            
+      {% endif %}
 
-  
- 
 
-  {% if field.errors  %}
-      
-
-    {% for error in field.errors %} 
-        
-        {{field.label(data_error=error, class_="")}}  
- 
-    {% endfor %}
-   
-  {% else %}
-   
-    {{field.label( data_success='ok', class_="")}}  
-        
-  {% endif %}
+ {% endif %}
 
   
 {% endmacro %}
