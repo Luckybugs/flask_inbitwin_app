@@ -3,131 +3,82 @@
 {% block body %}
 
 <div class="container">
-<div >
-</div>
-    <div class="row flex">
-        <div class="col s12 m6 l4">
-            <h1 style="font-weight: 600;">{{title}}</h1>
+
+    <div style="margin-top: 5rem;" class="row flex">
+        <div class="col s12 m6 l4 ">
+            <h2 style="font-weight: 600;">{{current.title}}</h2>
             <h5>{{current.byline}}</h5>
             <p>({{current.year}})</p>
-            <p>{{current.head_text}}</p>
         </div>
 
     <div class="col s12 m6 l8">
-        <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_1)}}">
+        <!-- <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.hero_image)}}"> -->
     </div>
     </div> <!--end row -->
-    
-     <div class="row flex">
-         <div class="col s12 m6 l8">
-        <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_2)}}">
-    </div>
-        <div class="col s12 m4 l4">
-            <p>{{current.img_2_text}}</p>
-        </div>
 
-    </div> <!--end row -->
-
-    <div class="row flex">
-    <div class="col s12 m6 l4">
-        <p>{{current.img_3_text}}</p>
-    </div>
-
-<div class="col s12 m6 l8">
-    <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_3)}}">
-</div>
-</div> <!--end row -->
-
- <div class="row flex">
-     <div class="col s12 m6 l8">
-    <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.img_4)}}">
-</div>
-    <div class="col s12 m6 l4">
-        <p>{{current.img_4_text}}</p>
-    </div>
-
-</div> <!--end row -->
-
-{% for k, v in current.items() %}
-        {{k}} : {{v}} </br>
-{% endfor %}
-
-{{ current|map('lower')|join(', ') }}
-
-
-in(value, seq)
-
-</div> <!-- end container -->
-
-
-<!-- NOVA IDEJA -->
-
-<div class="section white">
-  
-  <div class="container">
-    <div class="row">
-        <div class=" col l3">
-            <h1  class=""style="font-weight: 600; ">{{title}}</h1>
-            <h5 style="font-weight: 100;">{{current.byline}}</h5>
-        </div>
-    </div>
-    
-    {% with newdict=current|dictsort %}
-        {% for k, v in newdict %}
-        <div class="row">
-       <!--  -->
-            {% if 'img' in k %}
-            
-                {% if 'text' not in k %}
-                    <div class="col s12 m8 l8 ">
-                    <img class="materialboxed responsive-img" src="{{url_for('static', filename=v)}}">
-                    </div>
-                {% else %}
-                    <div class="col s12 m4 l4">
-                    <p class="center-align"> {{v}} </p>
-                    </div>
-            
-                {% endif %}
-               
-
-            {% endif %}
-            {% if 'video' in k %}
-            
-                {% if 'text' not in k %}
-                    <div class="col s12 m8 l8 ">
-                    <img class="materialboxed responsive-video" src="{{url_for('static', filename=v)}}">
-                    </div>
-                {% else %}
-                    <div class="col s12 m4 l4">
-                    <p class="center-align"> {{v}} </p>
-                    </div>
-            
-                {% endif %}
-
-            {% endif %}
-        {% endfor %}
-        </div><!-- end row --> 
-    {% endwith %}
-
-
-  </div><!-- end container -->
-</div><!-- end section -->
 
 
 
 <!-- NOVA IDEJA -->
 
-<div class="section pink">
-  <div class="container">
 
 
+{% with newdict=current.media|dictsort %}
+
+{% set row_class = cycler('col s12 m8 l8', 'col s12 m4 l4', 'col s12 m8 push-m4 l8 push-l4', 'col s12 m4 pull-m8 l4 pull-l8') %}
+   
+    {% for k, v in newdict %}
+
+      
+      
+
+      {% if loop.index is odd %} <div class="row flex {{loop.index}}">{% endif %}
 
 
-       {{ current.media.img_1 }}
+        {#   lets chek if the sorce is local #}
+
+        {% if 'http' in v %}
+          {% set not_local =true %}
+        {% endif %}
+
+
+        {% if 'text' in k %}
+        <div class="{{ row_class.next() }}">
+            <p>{{v}}</p><!-- text -->
+        </div>
+        {% endif %}
+        
+        {% if 'video' in k  and not_local %}
+            <div class="{{ row_class.next() }}">
+                <div class="video-container  ">
+                    <iframe src="{{v|safe}}"></iframe><!-- video -->
+                </div>
+            </div>
+        {% endif %}
+
+         {% if 'video' in k  and 'text' not in k and not not_local %}
+         <div class="{{ row_class.next() }}">
+            <video class="responsive-video" controls>
+                <source src="{{v}}" type="video/mp4"><!-- video -->
+            </video>
+        </div>
+        {% endif %}
+        
+
+        {% if 'img' in k and 'text' not in k %}
+        <div class="{{ row_class.next() }}">
+            <img class="materialboxed responsive-img " src="{% if not_local %} {{v}} {% else %} {{url_for('static', filename=v)}} {% endif %}"><!-- image -->
+        </div>
+        {% endif %}
     
 
+   
+    {% if loop.index is even %}</div>{% endif %}
+    {% endfor %}
 
  
+    
+{% endwith %}
 
 
  
@@ -135,8 +86,11 @@ in(value, seq)
 
 
 
-  </div><!-- end container -->
-</div><!-- end section -->
+ 
+
+</div><!-- end container -->
+
+
 
 {% endblock %}
 

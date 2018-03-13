@@ -19,9 +19,12 @@ main {
 
 .brand-logo {
 	margin-left: 3vw;
-  height: 20vh;
+  
 
 	font-weight: 100;
+}
+.nav-wrapper{
+  height: 20vh;
 }
 
 .center {
@@ -133,6 +136,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  margin-bottom: 3em;
 }
 
 .d-flex {
