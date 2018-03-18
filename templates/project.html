@@ -4,17 +4,21 @@
 
 <div class="container">
 
-    <div style="margin-top: 5rem;" class="row flex">
-        <div class="col s12 m6 l4 ">
-            <h2 style="font-weight: 600;">{{current.title}}</h2>
-            <h5>{{current.byline}}</h5>
-            <p>({{current.year}})</p>
+    <div style="" class=" row">
+        <div class="center-align">
+            <h4 style="font-weight: 100;">{{current.title}}</h4>
+            {% if current.byline| length >1 %}<h5 style="font-weight: 100;">{{current.byline}}</h5>{% endif %}
+            <p style="font-weight: 100; display: inline;">({{current.year}})</p>
+            
         </div>
 
-    <div class="col s12 m6 l8">
-        <!-- <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.hero_image)}}"> -->
-    </div>
+<!-- <div class="col s12 m6 l8">
+        <img class="materialboxed responsive-img" src="{{url_for('static', filename=current.hero_image)}}">
+    </div> -->
     </div> <!--end row -->
+
+
+<!-- carousel -->
 
 
 
@@ -25,12 +29,10 @@
 
 {% with newdict=current.media|dictsort %}
 
-{% set row_class = cycler('col s12 m8 l8', 'col s12 m4 l4', 'col s12 m8 push-m4 l8 push-l4', 'col s12 m4 pull-m8 l4 pull-l8') %}
+{% set row_class = cycler('col s12 m8 l10  center-align', 'col s12 m4 l2 ', ) %}
    
     {% for k, v in newdict %}
 
-      
-      
 
       {% if loop.index is odd %} <div class="row flex {{loop.index}}">{% endif %}
 
@@ -43,7 +45,7 @@
 
 
         {% if 'text' in k %}
-        <div class="{{ row_class.next() }}">
+        <div style="padding: 0.5em;"class="{{ row_class.next() }}">
             <p>{{v}}</p><!-- text -->
         </div>
         {% endif %}
@@ -67,13 +69,14 @@
 
         {% if 'img' in k and 'text' not in k %}
         <div class="{{ row_class.next() }}">
-            <img class="materialboxed responsive-img " src="{% if not_local %} {{v}} {% else %} {{url_for('static', filename=v)}} {% endif %}"><!-- image -->
+            <img style="display: inline-block;" class=" materialboxed responsive-img " data-caption="©2018 Aleksandar Jovanovic and Respective Studios | All images are for showreel purposes only." src="{% if not_local %} {{v}} {% else %} {{url_for('static', filename=v)}} {% endif %}"><!-- image -->
         </div>
         {% endif %}
     
 
    
     {% if loop.index is even %}</div>{% endif %}
+
     {% endfor %}
 
  
@@ -81,12 +84,7 @@
 {% endwith %}
 
 
- 
 
-
-
-
- 
 
 </div><!-- end container -->
 

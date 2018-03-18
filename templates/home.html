@@ -42,47 +42,6 @@
     </ul>
 </div>
 
-<div class="below">
-  
-  <div class="container">
-  <div id="projects" name="projects" class="section">
-    <div>
-    <h3 style="padding: 1.5em; font-weight: 100" class="center-align"> Projects</h3>
-    </div>
-
-    {% for project_row in projects | batch(2) %}
-    <div class="row">
-      {% for project in project_row %}
-       
-        <div class="col s12 m12 l6">
-         
-          <div class="card small hoverable z-depth-1 ">
-          
-            <div class="card-image waves-effect waves-block waves-light">
-              <a href="projects/{{project.title}}"><img src="{{url_for('static', filename= project.img_1)}}"></a>
-            </div>
-            <div class="card-content center-align">
-              <h3 class="truncate" style="font-weight: 100;">{{project.title}}</h3>
-            </div>
-
-          </div>
-        </div>
-        
-      {% endfor %}
-    </div>
-
-    {% endfor %}
-</div>
-  </div><!--end container-->
-
-</div>
-
-
-
-
-
-
-
 
 
 {% endblock %}

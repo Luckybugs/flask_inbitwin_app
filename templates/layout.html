@@ -3,6 +3,7 @@
     <head>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
       <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
@@ -33,7 +34,8 @@
     $(document).ready(function(){
     	// Init Slider
     	$('.slider').slider(
-        {indicators: false}
+        {indicators: false, interval: 4000}
+        
         );
     	
     	// Init lightbox
@@ -44,7 +46,7 @@
 
       $('.collapsible').collapsible();
 
-      $('.carousel.carousel-slider').carousel({fullWidth: true});
+      $('.carousel.carousel-slider').carousel({fullWidth: false});
 
 
     });
