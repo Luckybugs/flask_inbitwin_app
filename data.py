@@ -3,6 +3,7 @@ def Projects():
         {
             'id':5,
             'title':'Star Wars',
+            'page':'Star-Wars',
             'byline': 'The Last Jedi',
             'year': '2017',
             'hero_image': 'images/star_wars.jpg',
@@ -35,6 +36,7 @@ def Projects():
         {
             'id':1,
             'title':'The Jungle Book',
+            'page':'The-Jungle-Book',
             'year': '2016',
             'hero_image': 'images/The_Jungle_Book.jpg',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -80,6 +82,7 @@ def Projects():
         {
             'id':6,
             'title':'Passengers',
+            'page':'Passengers',
             'year': '2016',
             'hero_image': 'images/Passengers.jpg',
             'head_text':'Lorem ipsum dolor sit amet!',
@@ -129,6 +132,7 @@ def Projects():
         {
             'id':2,
             'title':'The Martian',
+            'page':'The-Martian',
             'year': '2015',
             'hero_image': 'images/Martian.jpg',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -151,6 +155,7 @@ def Projects():
         {
             'id':3,
             'title':'Exodus',
+            'page':'Exodus',
             'byline': 'Gods and Kings',
             'year': '2014',
             'hero_image': 'images/Exodus.jpg',
@@ -178,6 +183,7 @@ def Projects():
         {
             'id':4,
             'title':'Gardians of the galaxy',
+            'page':'Gardians-of-the-galaxy',
             'year': '2014',
             'hero_image': 'images/galaxy.jpg',
             'head_text':'',
@@ -199,12 +205,12 @@ def Projects():
                         'img_07_text': '',
                         'img_08': 'images/guardians/008.jpg',
                         'img_08_text': '',
-                        
                     }
         },
         {
             'id':5,
             'title':'Fantastic Beasts and Where to Find Them',
+            'page':'Fantastic-Beasts-and-Where-to-Find-Them',
             'year': '2016',
             'hero_image': 'images/fantastic.jpg',
             'head_text':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus id vel omnis, veniam nesciunt adipisci quis voluptatum, ex error laudantium, voluptate aspernatur, facere doloribus nisi placeat recusandae provident commodi quas!',
@@ -221,6 +227,7 @@ def Projects():
         {
             'id':6,
             'title':'Doctor Strange',
+            'page':'Doctor-Strange',
             'year': '2016',
             'hero_image': 'images/strange.jpg',
             'head_text':'',

@@ -17,7 +17,7 @@
 
   <div class="  h_container">
     <div class=" content ">
-      <a href="projects/{{project.title}}" >
+      <a href="projects/{{project.page | urlencode}}" >
         <div class="content-overlay"></div>
         <img class="content-image" src="{{url_for('static', filename= project.hero_image)}}">
         <div class="content-details fadeIn-bottom">

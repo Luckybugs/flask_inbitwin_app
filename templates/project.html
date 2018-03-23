@@ -29,7 +29,7 @@
 
 {% with newdict=current.media|dictsort %}
 
-{% set row_class = cycler('col s12 m8 l10  center-align', 'col s12 m4 l2 ', ) %}
+{% set row_class = cycler('col s12 m8 l10', 'col s12 m4 l2 ', ) %}
    
     {% for k, v in newdict %}
 
@@ -69,7 +69,7 @@
 
         {% if 'img' in k and 'text' not in k %}
         <div class="{{ row_class.next() }}">
-            <img style="display: inline-block;" class=" materialboxed responsive-img " data-caption="©2018 Aleksandar Jovanovic and Respective Studios | All images are for showreel purposes only." src="{% if not_local %} {{v}} {% else %} {{url_for('static', filename=v)}} {% endif %}"><!-- image -->
+            <img class=" slika materialboxed responsive-img " data-caption="©2018 Aleksandar Jovanovic and Respective Studios | All images are for showreel purposes only." src="{% if not_local %} {{v}} {% else %} {{url_for('static', filename=v)}} {% endif %}"><!-- image -->
         </div>
         {% endif %}
     
