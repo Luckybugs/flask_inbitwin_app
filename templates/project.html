@@ -5,8 +5,8 @@
 <div class="container">
 
     <div style="" class=" row">
-        <div class="center-align">
-            <h4 style="font-weight: 100;">{{current.title}}</h4>
+        <div class="center-align prtitle">
+            <h2 class="" style=" ">{{current.title}}</h2>
             {% if current.byline| length >1 %}<h5 style="font-weight: 100;">{{current.byline}}</h5>{% endif %}
             <p style="font-weight: 100; display: inline;">({{current.year}})</p>
             
@@ -45,8 +45,8 @@
 
 
         {% if 'text' in k %}
-        <div style="padding: 0.5em;"class="{{ row_class.next() }}">
-            <p>{{v}}</p><!-- text -->
+        <div style=""class="prtext grey-text text-darken-2 {{ row_class.next() }}">
+            <p>{{v}}</<p><!-- text -->
         </div>
         {% endif %}
         

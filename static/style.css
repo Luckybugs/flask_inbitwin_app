@@ -130,9 +130,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  margin-bottom: 3vw;
+  margin-top: ;
 }
+
 
 
 
@@ -149,9 +150,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 .slider .slides li .caption h3{
-  font-weight: 100;
+  font-weight: 500;
 
 }
+
+/*text on project page */
+
+.prtext{
+  padding: 0.5em;
+  margin-top: 0.8em;
+  font-weight: 300;
+  text-align: justify;
+  text-justify: auto;
+
+}
+
+.prtitle h2{
+  font-weight: 100;
+  font-size: 3.6em;
+  color: #424242;
+
+  margin-bottom: 0.1em;
+
+}
+
 
 
 
